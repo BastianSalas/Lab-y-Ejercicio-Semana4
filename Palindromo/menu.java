@@ -4,43 +4,32 @@ public class menu {
     static Scanner scanner = new Scanner(System.in);
 
     public static void menuPrincipal() {
-        int option;
+        int goku;
 
         do {
             System.out.println("·········································································");
             System.out.println("                                  Menú                                   ");
             System.out.println("                                                                         ");
-            System.out.println("Suma....................................................................1");
-            System.out.println("Resta...................................................................2");
-            System.out.println("Multiplicación..........................................................3");
-            System.out.println("División................................................................4");
-            System.out.println("Salir ..................................................................5");
+            System.out.println("Ingrese una palabra para verificar si es palindromo.....................1");
+            System.out.println("Salir ..................................................................2");
             System.out.println("                                                                         ");
             System.out.println("·········································································");
             System.out.print("Elija opción: ");
 
-            option = scanner.nextInt();
+            goku = scanner.nextInt();
 
-            switch (option) {
+            switch (goku) {
                 case 1:
-                    operaciones.suma();
+                    funciones.verificarPalindromo();
                     break;
+
                 case 2:
-                    operaciones.resta();
-                    break;
-                case 3:
-                    operaciones.multiplicacion();
-                    break;
-                case 4:
-                    operaciones.division();
-                    break;
-                case 5:
                     System.out.println("Fin del programa.");
                     break;
                 default:
                     System.out.println("Opción no válida. Por favor, ingrese una opción válida (1-5).");
             }
-        } while (option != 5);
+        } while (goku != 2);
 
         scanner.close();
     }
